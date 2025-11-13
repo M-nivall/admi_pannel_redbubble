@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) > 0) {
         // Supplier already placed a bid
         $response['status'] = 0;
-        $response['message'] = 'You have already submitted a bid for this request.';
+        $response['message'] = 'You have already submitted a bid for this tender.';
         echo json_encode($response);
         exit();
     }
