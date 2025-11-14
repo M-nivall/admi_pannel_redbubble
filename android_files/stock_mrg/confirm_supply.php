@@ -41,7 +41,6 @@ if(mysqli_query($con,$update)){
     $response['status']=0;
     $response['message']='Please try again';
 
-
 }
 echo json_encode($response);
 }
