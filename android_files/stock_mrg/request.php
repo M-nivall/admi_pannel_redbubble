@@ -8,7 +8,7 @@ $select="SELECT *
     FROM request r 
     INNER JOIN supply_bids s ON r.id = s.request_id 
     INNER JOIN clients c ON s.supplier_id = c.client_id
-    WHERE s.bid_status IN ('Pending approval')
+    WHERE s.bid_status IN ('Pending approval') AND r.request_status = 'Active'
     ORDER BY s.bid_id DESC";
 $query=mysqli_query($con,$select);
 if(mysqli_num_rows($query)>0){

@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Then insert into supply_payment
         $insertPayment = "INSERT INTO supply_payment (supplier_id, amount, payment_description, quantity, request_id)
-                          VALUES ('$userID', '$totalAmount', 'Payment for $items', '$quantity', '$requestID')";
+                          VALUES ('$userID', '$totalAmount', '$items', '$quantity', '$requestID')";
 
         if (mysqli_query($con, $insertPayment)) {
             $response['status'] = 1;

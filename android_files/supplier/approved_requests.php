@@ -7,7 +7,7 @@ $userID=$_POST["userID"];
 
 $select="SELECT * FROM request r 
     INNER JOIN supply_bids s ON r.id = s.request_id 
-    WHERE s.bid_status = 'Approved' and s.supplier_id = '$userID' ORDER BY r.id DESC";
+    WHERE s.bid_status IN('Approved', 'Supplied', 'Confirmed Supply', 'Paid') and s.supplier_id = '$userID' ORDER BY r.id DESC";
 $query=mysqli_query($con,$select);
 if(mysqli_num_rows($query)>0){
     $response['status']=1;

@@ -11,7 +11,7 @@ $requestID=$_POST['requestID'];
 $update="UPDATE supply_payment SET payment_status='Paid' WHERE id='$id'";
   
   
-$update2="UPDATE request SET request_status='Paid' WHERE id='$requestID'";
+$update2="UPDATE supply_bids SET bid_status = 'Paid' WHERE request_id='$requestID'";
     mysqli_query($con,$update2);
 if(mysqli_query($con,$update)){
 
