@@ -9,9 +9,8 @@ $id=$_POST['requestID'];
 $bidID=$_POST['bidID'];
 $color=$_POST['color'];
 
-$update="UPDATE supply_bids SET bid_status = 'Approved' WHERE bid_id = '$bidID' ";
+$update="UPDATE supply_bids SET bid_status = 'Confirmed Supply' WHERE bid_id = '$bidID' ";
 
-/*
 
 $sel="SELECT quantity,payment_description FROM supply_payment  WHERE request_id='$id' ";
           $qury=mysqli_query($con,$sel);
@@ -30,14 +29,13 @@ $sel2="SELECT stock FROM stock  WHERE product_category='$payment_description' AN
 $update1="UPDATE stock SET stock =$totalstock WHERE product_category='$payment_description' AND color='$color'";
     mysqli_query($con,$update1);
 
-    */
 
 if(mysqli_query($con,$update)){
     $update1="UPDATE request SET request_status = 'Closed' WHERE id = '$id' ";
     mysqli_query($con,$update1);
 
     $response['status']=1;
-    $response['message']='Approved successfully';
+    $response['message']='Approved successfully, Stock increased';
 
 }else{
     $response['status']=0;
