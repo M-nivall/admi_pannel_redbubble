@@ -43,9 +43,6 @@ include('include/connections.php');
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Product Details </h4>
-                 
-                 
-                 
                                             
                                            <?php
                     $select="SELECT * FROM clients c INNER JOIN bookings b on c.client_id = b.client_id
