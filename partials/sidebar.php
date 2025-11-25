@@ -1,4 +1,5 @@
 <nav class="sidebar sidebar-offcanvas bg-dark text-white" id="sidebar" style="color: white;">
+  
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link text-white" href="index.php">
@@ -92,4 +93,5 @@
             </div>
           </li>
   </ul>
+
 </nav>
