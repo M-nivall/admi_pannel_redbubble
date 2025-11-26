@@ -67,8 +67,7 @@ include('include/connections.php');
                                                    
                                              </tr>
                                         </thead>
-                                        <tbody>
-                                           
+                                        <tbody>   
                                             
                                             <?php
                                             $select="SELECT * FROM clients c INNER JOIN bookings b on c.client_id = b.client_id
