@@ -124,6 +124,5 @@ include('include/connections.php');
       location.reload();
     }
   </script>
-
 </body>
 </html>
